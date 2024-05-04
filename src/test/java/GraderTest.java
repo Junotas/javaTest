@@ -16,11 +16,21 @@ class GraderTest {
         var grader = new Grader();
         assertEquals('F', grader.determineLetterGrade(0));
     }
+   /* @Test
+    void negativeOneShouldReturnIllegalArgumentException(){
+
+        var grader = new Grader();
+        grader.determineLetterGrade(-1);
+    }*/
     @Test
     void sixtyNineShouldReturnD(){
 
         var grader = new Grader();
-        assertEquals('D', grader.determineLetterGrade(69));
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    grader.determineLetterGrade(-1);
+                });
+
     }
     @Test
     void sixtyShouldReturnD(){
