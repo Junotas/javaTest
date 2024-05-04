@@ -3,7 +3,8 @@ public class Grader {
     public char determineLetterGrade(int numberGrade) {
         if (numberGrade < 0) {
             throw new IllegalArgumentException("Number grade cannot");
-        } else if (numberGrade < 60) {
+        }
+        else if (numberGrade < 60) {
             return 'F';
 
         }
